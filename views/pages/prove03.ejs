@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head>
+  <% include ../includes/header.ejs %>
+  <script src="prove03.js"></script>
+</head>
+<body>
+  <% include ../includes/nav.ejs %>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1><%= title %></h1>
+      <p></p>
+    </div>
+  </div>
+  <div class="container">
+      <h1>JSON Results</h1>
+      <% const fs = require('fs'); %>
+      <% let rawData = fs.readFileSync('items.json'); %>
+      <% parsedData = JSON.parse(rawData);%>
+      <h6><%= parsedData%></h6>               
+  </div>
+</body></html>
