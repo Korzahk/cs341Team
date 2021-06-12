@@ -6,7 +6,7 @@
 // cd C:\git\cse341\w01Team\cse341-project
 // npm run start
 const https = require('https')
-const ITEMS_PER_PAGE = 5
+const ITEMS_PER_PAGE = 10
 
 const renderIndex = (req, res, json) => {
     let searchedValue = req.body.searchValue || req.query.searchValue || ''
