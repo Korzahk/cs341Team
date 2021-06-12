@@ -5,6 +5,7 @@
 *******************************************************************************/
 // cd C:\git\cse341\w01Team\cse341-project
 // npm run start
+
 // Our initial setup (package requires, port number setup)
 const PORT = process.env.PORT || 5000 // heroku || localhost:5000
 const path = require('path');
@@ -23,6 +24,7 @@ const ta05Routes = require('./routes/ta05');
 
 const prove04 = require('./routes/prove04');
 const prove05 = require('./routes/prove05');
+const prove08 = require('./routes/prove08');
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
@@ -35,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use('/ta05', ta05Routes)
    .use('/prove04', prove04)
    .use('/prove05', prove05)
+   .use('/prove08', prove08)
    .get('/', (req, res, next) => {
      // This is the primary index, always handled last. 
      res.render('pages/index', {title: 'Welcome to my CSE341 repo', path: '/'});
@@ -46,5 +49,5 @@ app.use(express.static(path.join(__dirname, 'public')))
    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
   (() => {
-  app.listen(3000);
+  app.listen(PORT);
 });
