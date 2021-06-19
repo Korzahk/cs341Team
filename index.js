@@ -25,6 +25,7 @@ const ta05Routes = require('./routes/ta05');
 const prove04 = require('./routes/prove04');
 const prove05 = require('./routes/prove05');
 const prove08 = require('./routes/prove08');
+const prove09 = require('./routes/prove09');
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
@@ -38,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use('/prove04', prove04)
    .use('/prove05', prove05)
    .use('/prove08', prove08)
+   .use('/prove09', prove09)
+
    .get('/', (req, res, next) => {
      // This is the primary index, always handled last. 
      res.render('pages/index', {title: 'Welcome to my CSE341 repo', path: '/'});
