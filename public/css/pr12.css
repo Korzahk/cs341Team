@@ -1,3 +1,8 @@
+body {
+    background-image: url("/images/BYUI-logo.png");
+    color: #525252;
+}
+
 .container {
     height: 80vh;
     overflow-y: auto;
@@ -21,9 +26,9 @@ ul.chat li.message {
 }
 
 ul.chat li.uMessage {
-    border: solid #008000 0.5rem;
+    border: solid #000000 0.5rem;
     margin-left: auto;
-    background-color: #008000;
+    background-color: #140972;
     color: #F8F8FF;
 }
 
@@ -35,10 +40,14 @@ ul.chat li.uMessage {
 }
 
 .input textarea {
-    border: solid #000000 0.5rem;
+    border: solid #000000 0.33rem;
     width: 75%;
 }
 
 .displayname {
     font-size: 1.5em;
+    border: solid #000000 0.33rem;
+    width: 75%;
+    background-color: #b30e0e;
+    color: #F8F8FF;
 }
